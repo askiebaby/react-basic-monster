@@ -22,7 +22,9 @@ class App extends Component {
 
   render() {
     const { monsters, searchField } = this.state;
+
     const filteredMonsters = monsters.filter((monster) => {
+      console.log('monster!!', monster);
       return monster.name.toLowerCase().includes(searchField.toLowerCase());
     });
 
